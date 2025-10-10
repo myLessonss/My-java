@@ -1,17 +1,21 @@
 import java.util.Scanner;
 public class Calc{
+    //method for adding twwwo numbers
     public void add(int x,int y){
         int sum=x+y;
         System.out.println(x+"+"+y+"="+sum);
     }
+    //method for substracting two numbers
     public void minus(int x,int y){
         int diff=x-y;
         System.out.println(x+"-"+y+"="+diff);
     }
+    //method for multipling two numbers
     public void product(int x,int y){
         int prod=x*y;
         System.out.println(x+"x"+y+"="+prod);
     }
+    //method for dividing two numbers but we have to check the base that is different from 0
     public void division(int x,int y){
         if(y!=0){
             double div=(double)x/y;
@@ -24,6 +28,7 @@ public class Calc{
 
 public static void main(String [] args){
     int a,b,c;
+    //myscanner for Entering the numbers and operation sin
     Scanner myscanner=new Scanner(System.in);
     System.out.println("Enter in first number: ");
     a=myscanner.nextInt();
@@ -32,6 +37,7 @@ public static void main(String [] args){
     System.out.println("Enter in the number of operation:\n 1.ADD\n 2.SUBSTRACT\n 3.MULTIPLY\n 4.DIVISION");
     c=myscanner.nextInt();
     Calc mymethod=new Calc();
+    //caling method in switch condition based on entered operarion sign
     switch(c){
         case 1:mymethod.add(a,b);
         break;
@@ -43,9 +49,5 @@ public static void main(String [] args){
         break;
         default:System.out.println("Enter in the correct number for product2");
     }
-    
-   
-
-
 }
 }
