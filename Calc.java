@@ -43,9 +43,5 @@ public static void main(String [] args){
         break;
         default:System.out.println("Enter in the correct number for product2");
     }
-    
-   
-
-
 }
 }
