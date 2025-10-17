@@ -26,18 +26,5 @@ public class Answers{
         }else{
             System.out.println("ALL NUMBERS ARE EQUAL");
         }
-    //checking if year is leap year
-        int year;
-        System.out.println("\n Enter in the year to check if it is leap year: ");
-        year=myscanner.nextInt();
-        if (year%4==0 || (year%400==0 && year%100==0)){
-            System.out.println("LEAP YEAR");
-        }else{
-            System.out.println("NOT LEAP YEAR");
-        }
-        
-
-          
-
     }
 }
