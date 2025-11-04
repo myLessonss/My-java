@@ -25,5 +25,12 @@ public class Withdraw {
     public double getBalance() {
         return balance;
     }
-    
+    public void withdraw(){
+        if(withdrawAmount<balance && (balance-withdrawAmount)>1000){
+            System.out.println("You have withdrawn "+withdrawAmount+" amount.");
+            System.out.println("Your balance is: "+(balance-withdrawAmount));
+        }else{
+            System.out.println("Insufficient balance");
+        }
+    }
 }

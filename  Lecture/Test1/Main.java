@@ -10,6 +10,13 @@ public class Main {
         String name=scn.nextLine();
         User myobj=new User(id, name);
         myobj.display();
+        //withdrawing money 
+        System.out.println("Enter in amount you want to withdraw: ");
+        double withdrawAmount=scn.nextDouble();
+        System.out.println("Enter in your balance: ");
+        double balance=scn.nextDouble();
+        Withdraw withdrawObj=new Withdraw(id, withdrawAmount, balance);
+        withdrawObj.withdraw();
         System.out.println("Enter in your approved amount: ");
         double approvedAmount=scn.nextDouble();
         System.out.println("Enter in the amount of loan u want: ");
