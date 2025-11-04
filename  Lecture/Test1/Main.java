@@ -9,7 +9,7 @@ public class Main {
         System.out.print("Enter in your name: ");
         String name=scn.nextLine();
         User myobj=new User(id, name);
-        System.out.println("The user deatils are:\n Id:"+id+" \nName:"+name);
+        myobj.display();
         System.out.println("Enter in your approved amount: ");
         double approvedAmount=scn.nextDouble();
         System.out.println("Enter in the amount of loan u want: ");

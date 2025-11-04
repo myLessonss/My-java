@@ -18,5 +18,8 @@ public class User {
         this.name = name;
     }
     
-    
+    public void display(){
+        System.out.println("The user details are:\n Id:"+id+" \nName:"+name);
+        
+    }
 }
