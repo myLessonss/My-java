@@ -6,12 +6,15 @@ import operations.Product;
 public class Main {
     public static void main(String[]args){
         Scanner myscan=new Scanner(System.in);
+        int operator;
+        do{
         System.out.println("First number");
         float a=myscan.nextFloat();
         System.out.println("Second number");
         float b=myscan.nextFloat();
-        System.out.println("Enter in your operator:\n1.Add\n2.Minus\n3.Divide\n4.Product");
-        int operator=myscan.nextInt();
+        System.out.print("Enter in your operator:\n1.Add\n2.Minus\n3.Divide\n4.Product\n5.Exit\nOperator:");
+        operator=myscan.nextInt();
+
         if (operator==1) {
             Add addObj=new Add(a, b);
             addObj.findSum();
@@ -33,9 +36,12 @@ public class Main {
             productObj.findProduct();
             System.out.println("The First number used is: "+productObj.getNum1());
             System.out.println("The Second number used is: "+productObj.getNum2());
+        }else if(operator==5){
+            System.out.println("System existing.....soon.");
         }else{
             System.out.println("Enter in operator among that 4");
         }
+        }while(operator!=5);
         
     }
         
