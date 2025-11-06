@@ -1,4 +1,8 @@
 import java.util.Scanner;
+import operations.Add;
+import operations.Divide;
+import operations.Minus;
+import operations.Product;
 public class Main {
     public static void main(String[]args){
         Scanner myscan=new Scanner(System.in);

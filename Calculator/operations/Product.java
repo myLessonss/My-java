@@ -1,7 +1,8 @@
-public class Add{
+package operations;
+public class Product {
     private float num1;
     private float num2;
-    public Add(float num1, float num2) {
+    public Product(float num1, float num2) {
         this.num1 = num1;
         this.num2 = num2;
     }
@@ -17,8 +18,8 @@ public class Add{
     public float getNum2() {
         return num2;
     }
-    public void findSum(){
-        System.out.println(num1+" + "+num2+" = "+(num1+num2));
+    public void findProduct(){
+        System.out.println(num1+" x "+num2+" = "+(num1*num2));
     }
     
 }

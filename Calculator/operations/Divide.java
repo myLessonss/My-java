@@ -1,7 +1,8 @@
-public class Minus{
+package operations;
+public class Divide{
     private float num1;
     private float num2;
-    public Minus(float num1, float num2) {
+    public Divide(float num1, float num2) {
         this.num1 = num1;
         this.num2 = num2;
     }
@@ -17,9 +18,8 @@ public class Minus{
     public float getNum2() {
         return num2;
     }
-    public void findDiff(){
-        float diff=num1-num2;
-        System.out.println(num1+" - "+num2+" = "+diff);
+    public void findDivide(){
+        System.out.println(num1+" / "+num2+" = "+(num1/num2));
     }
     
 }
