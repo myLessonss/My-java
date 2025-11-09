@@ -24,6 +24,19 @@ public class Main{
         }else{
             userObj.registerPassenger();
         }
-        
+        //adding flight
+        System.out.println("Add flight");
+        System.out.print("Flight number: ");
+        int flightNumber=myscan.nextInt();
+        myscan.nextLine();
+        System.out.print("Flight destination:");
+        String flightDestination=myscan.nextLine();
+
+        System.out.print("Flight fare:");
+        String flightFare=myscan.nextLine();
+        System.out.print("Available seats:");
+        int availableSeats=myscan.nextInt();
+        Flight flightObj=new Flight(flightNumber, flightDestination, flightFare, availableSeats);
+        flightObj.addFlight();
     }
 }
