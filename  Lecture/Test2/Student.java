@@ -9,10 +9,10 @@ public class Student extends Department {
     private String phone;
     private String major;
     //contructor
-    public Student(int id, String gishushuAddress, String gishushuEmail, String gishushuPhone, int facultyId,
+    public Student(String gishushuAddress, String gishushuEmail, String gishushuPhone, int facultyId,
             String facultyName, int deptId, String deptName, int idNumber, String name, int age, String gender,
             String address, String phone, String major) {
-        super(id, gishushuAddress, gishushuEmail, gishushuPhone, facultyId, facultyName, deptId, deptName);
+        super(gishushuAddress, gishushuEmail, gishushuPhone, facultyId, facultyName, deptId, deptName);
         this.idNumber = idNumber;
         this.name = name;
         this.age = age;
@@ -38,12 +38,18 @@ public class Student extends Department {
         return age;
     }
     public void setAge(int age) {
+        if(age<18){
+            System.out.println("Age must be greater than 18");
+        }
         this.age = age;
     }
     public String getGender() {
         return gender;
     }
     public void setGender(String gender) {
+        if (gender=="male"&& gender=="female") {
+            System.out.println("Gender must be male or female");            
+        }
         this.gender = gender;
     }
     public String getAddress() {
