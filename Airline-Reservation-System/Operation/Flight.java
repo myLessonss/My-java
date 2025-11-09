@@ -36,5 +36,7 @@ public class Flight{
     public void setAvailableSeats(int availableSeats) {
         this.availableSeats = availableSeats;
     }
-    
+    public void addFlight(){
+        System.out.println("Flight Added\n Flight number:"+flightNumber+"\n Flight Destination:"+flightDestination+"\n Flight fare:"+flightFare+"\n Available seats:"+availableSeats);
+    }
 }
