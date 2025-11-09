@@ -4,12 +4,14 @@ public class Flight{
     private String flightDestination;
     private String flightFare;
     private int availableSeats;
+    //constuctor
     public Flight(int flightNumber, String flightDestination, String flightFare, int availableSeats) {
         this.flightNumber = flightNumber;
         this.flightDestination = flightDestination;
         this.flightFare = flightFare;
         this.availableSeats = availableSeats;
     }
+    //getters and setterrs
     public int getFlightNumber() {
         return flightNumber;
     }
@@ -34,6 +36,5 @@ public class Flight{
     public void setAvailableSeats(int availableSeats) {
         this.availableSeats = availableSeats;
     }
-
     
 }
