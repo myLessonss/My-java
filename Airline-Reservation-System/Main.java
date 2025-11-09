@@ -38,5 +38,14 @@ public class Main{
         int availableSeats=myscan.nextInt();
         Flight flightObj=new Flight(flightNumber, flightDestination, flightFare, availableSeats);
         flightObj.addFlight();
+        //Booking Flight
+        System.out.println("Booking Flight");
+        System.out.print(" Booking Id:");
+        int bookFlight=myscan.nextInt();
+        String passenger=userName;
+        String flight=flightDestination;
+        Booking bookingObj=new Booking(bookFlight, passenger, flight);
+        bookingObj.bookFlight();
+        
     }
 }
