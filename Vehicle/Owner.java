@@ -38,14 +38,19 @@ public class Owner {
     }
     //Setters
     public void setOwnerId(String ownerId) {
+        //ownerId validation tno be unique  ------Missing Validation
         this.ownerId = ownerId;
     }
 
     public void setName(String name) {
+        if (name==null || name.trim().isEmpty()) {
+            throw new IllegalArgumentException("Name must not be Empty");
+        }
         this.name = name;
     }
 
     public void setNationalId(String nationalId) {
+        //nationalId must be 16 digits  ------------Missing Validation
         this.nationalId = nationalId;
     }
 
@@ -54,10 +59,14 @@ public class Owner {
     }
 
     public void setAddress(String address) {
+        if (address==null || address.trim().isEmpty()) {
+            throw new IllegalArgumentException("Address must not be Empty.");
+        }
         this.address = address;
     }
 
     public void setDateOfBirth(String dateOfBirth) {
+        //Age>=18  -------Missing Validation
         this.dateOfBirth = dateOfBirth;
     }
     

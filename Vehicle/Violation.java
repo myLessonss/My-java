@@ -38,6 +38,7 @@ public class Violation {
         this.vehicleId = vehicleId;
     }
     public void setViolationType(String violationType) {
+        //violationType must be predefined validation
         this.violationType = violationType;
     }
     public void setDate(String date) {
@@ -47,6 +48,9 @@ public class Violation {
         this.officerId = officerId;
     }
     public void setFineAmount(float fineAmount) {
+        if (!(fineAmount>0)) {
+            throw new IllegalArgumentException("Fine amount must be Greater than 0");
+        }
         this.fineAmount = fineAmount;
     }
     
