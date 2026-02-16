@@ -3,6 +3,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.FocusEvent;
+import java.awt.event.FocusListener;
 
 public class Main {
     public static void main(String[] args){
@@ -139,6 +141,22 @@ public class Main {
                 System.out.println(gender);
 
                 String skills="";
+                if (java.isSelected()){
+                    skills+= java.getText();
+                }
+                System.out.println(skills);
+                //Focus Listener
+                firstname.addFocusListener(new FocusListener() {
+                    @Override
+                    public void focusGained(FocusEvent e) {
+                        System.out.println("I got Focus");
+                    }
+
+                    @Override
+                    public void focusLost(FocusEvent e) {
+                        System.out.println("You loose focus");
+                    }
+                });
 
 
 
