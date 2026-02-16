@@ -1,6 +1,8 @@
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Main {
     public static void main(String[] args){
@@ -8,7 +10,7 @@ public class Main {
         JFrame frame=new JFrame("Student Registration Form");
 
         JPanel panel=new JPanel();
-        panel.setLayout(new GridLayout(20,2,20,10));
+        panel.setLayout(new GridLayout(18,2,2,5));
 
         //labels
         JLabel studentIdLabel=new JLabel("Student ID: ");
@@ -33,9 +35,13 @@ public class Main {
         JRadioButton maleButton=new JRadioButton("Male");
         JLabel femaleLabel=new JLabel();
         JRadioButton femaleButton=new JRadioButton("Female");
+        //group button
+        ButtonGroup group=new ButtonGroup();
+        group.add(maleButton);
+        group.add(femaleButton);
 
         JLabel departmentLabel=new JLabel("Department");
-        String [] department={"Computer Science","Software Engineering","Information Technology","Networking","Business Information Technology"};
+        String [] department={"---Please select---","Computer Science","Software Engineering","Information Technology","Networking","Business Information Technology"};
         JComboBox<String> departmentCombo=new JComboBox<String>(department);
 
         JLabel yearLabel=new JLabel("Year");
@@ -52,11 +58,6 @@ public class Main {
         JCheckBox net = new JCheckBox();
         JLabel mobileLabel=new JLabel("Mobile Development");
         JCheckBox mobile = new JCheckBox();
-
-        //group button
-        ButtonGroup group=new ButtonGroup();
-        group.add(maleButton);
-        group.add(femaleButton);
 
         //buttons
         JLabel saveLabel=new JLabel();
@@ -107,9 +108,41 @@ public class Main {
         panel.add(exitButton);
 
         frame.add(panel);
-        frame.setSize(500,600);
+        frame.pack();
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
+
+        //Add action Listener to the button
+        exitButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.setVisible(false);
+            }
+        });
+        saveButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //Retrieve user input
+                String studentIdd= studentId.getText();
+                System.out.println(studentIdd);
+                //Retrieve combo box data
+                String comboRetrieve=(String) yearCombo.getSelectedItem();
+                System.out.println(comboRetrieve);
+                //Using if
+                String gender=null;
+                if (femaleButton.isSelected()){
+                    gender=femaleButton.getText();
+                }if (maleButton.isSelected()){
+                    gender=maleButton.getText();
+                }
+                System.out.println(gender);
+
+                String skills="";
+
+
+
+            }
+        });
     }
 }
