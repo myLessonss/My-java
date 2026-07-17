@@ -38,6 +38,7 @@ public class Main {
       System.out.println("Enter in Student major: ");
       String studentMajor=sc.nextLine();
       Student student=new Student(campusAddress,campusEmail,phone,fId,fname,deptId,deptname,studentID,studentName,studentAge,studentGender,studentAddress,studentPhoneNumber,studentMajor);
+      sc.close();
       
    }
 }
