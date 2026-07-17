@@ -24,5 +24,7 @@ public class Main {
         Loan myloan=new Loan();
         double b=myloan.getApprovedAmount();
         System.out.println(b);
+        scn.close();
+
     }
 }
