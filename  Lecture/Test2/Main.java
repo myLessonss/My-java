@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Main {
    public static void main(String[]args){
+     //you must add in the comments
       Scanner sc=new Scanner(System.in);
       System.out.println("Enter the campus address");
       String campusAddress=sc.nextLine();
